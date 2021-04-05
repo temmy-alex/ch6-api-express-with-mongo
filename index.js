@@ -5,6 +5,9 @@ const cors = require('cors');
 
 app.use(express.urlencoded({extended:false}));
 
+const routers = require('./routers')
+app.use(routers)
+
 app.use(cors())
 
 // Middleware menangani error 404
